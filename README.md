@@ -2,9 +2,9 @@
 
 Go configuration with fangs!
 
-[![Actions](https://github.com/spf13/viper/workflows/CI/badge.svg)](https://github.com/spf13/viper)
+[![Actions](https://github.com/blagojts/viper/workflows/CI/badge.svg)](https://github.com/blagojts/viper)
 [![Join the chat at https://gitter.im/spf13/viper](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/spf13/viper?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![GoDoc](https://godoc.org/github.com/spf13/viper?status.svg)](https://godoc.org/github.com/spf13/viper)
+[![GoDoc](https://godoc.org/github.com/blagojts/viper?status.svg)](https://godoc.org/github.com/blagojts/viper)
 
 Many Go projects are built using Viper including:
 
@@ -22,7 +22,7 @@ Many Go projects are built using Viper including:
 ## Install
 
 ```console
-go get github.com/spf13/viper
+go get github.com/blagojts/viper
 ```
 
 
@@ -393,7 +393,7 @@ viper.BindFlagValues("my-flags", fSet)
 To enable remote support in Viper, do a blank import of the `viper/remote`
 package:
 
-`import _ "github.com/spf13/viper/remote"`
+`import _ "github.com/blagojts/viper/remote"`
 
 Viper will read a config string (as JSON, TOML, YAML, HCL or envfile) retrieved from a path
 in a Key/Value store such as etcd or Consul.  These values take precedence over
@@ -435,7 +435,7 @@ err := viper.ReadRemoteConfig()
 ```
 
 #### Consul
-You need to set a key to Consul key/value storage with JSON value containing your desired config.  
+You need to set a key to Consul key/value storage with JSON value containing your desired config.
 For example, create a Consul key/value store key `MY_CONSUL_KEY` with value:
 
 ```json
@@ -738,14 +738,14 @@ Viper uses [github.com/mitchellh/mapstructure](https://github.com/mitchellh/maps
 
 ### Marshalling to string
 
-You may need to marshal all the settings held in viper into a string rather than write them to a file. 
+You may need to marshal all the settings held in viper into a string rather than write them to a file.
 You can use your favorite format's marshaller with the config returned by `AllSettings()`.
 
 ```go
 import (
     yaml "gopkg.in/yaml.v2"
     // ...
-) 
+)
 
 func yamlStringSettings() string {
     c := viper.AllSettings()

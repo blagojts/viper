@@ -2,7 +2,7 @@ linters-settings:
     golint:
         min-confidence: 0.1
     goimports:
-        local-prefixes: github.com/spf13/viper
+        local-prefixes: github.com/blagojts/viper
 
 linters:
     enable-all: true
